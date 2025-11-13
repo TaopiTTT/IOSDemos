@@ -10,9 +10,22 @@
 		56C59A772EC35E91009BE11F /* Demo9_VideoBackground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo9_VideoBackground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		56C59A892EC35E91009BE11F /* Exceptions for "Demo9_VideoBackground" folder in "Demo9_VideoBackground" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 56C59A762EC35E91009BE11F /* Demo9_VideoBackground */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		56C59A792EC35E91009BE11F /* Demo9_VideoBackground */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				56C59A892EC35E91009BE11F /* Exceptions for "Demo9_VideoBackground" folder in "Demo9_VideoBackground" target */,
+			);
 			path = Demo9_VideoBackground;
 			sourceTree = "<group>";
 		};
