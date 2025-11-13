@@ -33,7 +33,9 @@ class ViewController: UIViewController {
     }()
     
     @objc func clickButton() {
-        let loginViewController = 
+        let loginViewController = LoginController()
+        loginViewController.modalPresentationStyle = .fullScreen
+        present(loginViewController, animated: true, completion: nil)
     }
     
     lazy var signUpBtn: UIButton = {
@@ -78,6 +80,16 @@ class ViewController: UIViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        backgroundPlayer.pause()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        backgroundPlayer.play()
     }
 
 }
