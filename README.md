@@ -35,7 +35,7 @@ Demo12：TableView动画效果
 
 Demo13：老虎机效果
 
-Demo14：飞溅动画效果
+Demo14：开屏动画效果
 
 Demo15：边栏目录
 
@@ -48,5 +48,4 @@ Demo18：APP store推荐页效果
 Demo19：左滑删除tablecell
 
 Demo20：3Dtouch
-
 
