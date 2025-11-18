@@ -39,13 +39,9 @@ Demo14：开屏动画效果
 
 Demo15：边栏目录
 
-Demo16：翻滚目录
+Demo16：聊天框&&文字区域限制
 
-Demo17：聊天框&&文字区域限制
-
-Demo18：APP store推荐页效果
+Demo18：CollectionViewCell动画效果
 
 Demo19：左滑删除tablecell
-
-Demo20：3Dtouch
 
