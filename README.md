@@ -41,7 +41,7 @@ Demo15：边栏目录
 
 Demo16：聊天框&&文字区域限制
 
-Demo18：CollectionViewCell动画效果
+Demo17：CollectionViewCell动画效果
 
-Demo19：左滑删除tablecell
+Demo18：左滑删除tablecell
 
