@@ -22,7 +22,10 @@ class ViewController: UIViewController {
     }()
     
     @objc func clickLeftBarButton(){
-        
+        let tabViewController = TabViewController()
+        tabViewController.transitioningDelegate = animationController
+        animationController.delegate = self
+        present(tabViewController, animated: true, completion: nil)
     }
     
     lazy var tableView: UITableView = {
@@ -43,7 +46,55 @@ class ViewController: UIViewController {
         self.navigationItem.title = "Everyday Moments"
         self.view.addSubview(tableView)
     }
+    
+    let animationController = AnimationController()
 
 
 }
 
+extension ViewController:UITableViewDataSource,UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: id, for: indexPath) as! MainCell
+        cell.backgroundColor = .systemGroupedBackground
+        if indexPath.row == 0 {
+            cell.backImageView.image = UIImage(named: "1")
+            cell.titleLabel.text = "Love mountain."
+            cell.authorLabel.text = "Allen Wang"
+            cell.authorImageView.image = UIImage(named: "a")
+            
+        } else if indexPath.row == 1 {
+            cell.backImageView.image = UIImage(named: "2")
+            cell.titleLabel.text = "New graphic design - LIVE FREE"
+            cell.authorLabel.text = "Cole"
+            cell.authorImageView.image = UIImage(named: "b")
+            
+        } else if indexPath.row == 2 {
+            cell.backImageView.image = UIImage(named: "3")
+            cell.titleLabel.text = "Summer sand"
+            cell.authorLabel.text = "Daniel Hooper"
+            cell.authorImageView.image = UIImage(named: "c")
+            
+        } else {
+            cell.backImageView.image = UIImage(named: "4")
+            cell.titleLabel.text = "Seeking for signal"
+            cell.authorLabel.text = "Noby-Wan Kenobi"
+            cell.authorImageView.image = UIImage(named: "d")
+            
+        }
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 240
+    }
+}
+
+extension ViewController: AnimationDelegate {
+    func dismiss() {
+        dismiss(animated: true, completion: nil)
+    }
+}
